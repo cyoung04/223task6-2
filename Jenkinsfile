@@ -35,10 +35,11 @@ pipeline{
             }
             post{
                 success{
-                    mail to: "cyoung1902@gmail.com",
-                    subject: "Security Scan Status Email",
-                    body: "Security scan was successful",
-                    emailext attachLog
+                    script{
+                        mail to: "cyoung1902@gmail.com",
+                        subject: "Security Scan Status Email",
+                        body: "Security scan was successful",
+                        emailext attachLog}
                 }
             }
         }
@@ -55,10 +56,11 @@ pipeline{
             }
             post{
                 success{
-                    mail to: "cyoung1902@gmail.com",
-                    subject: "Integration Tests on Staging Status Email",
-                    body: "Integration tests on staging were successful",
-                    emailext attachLog
+                    script{
+                        mail to: "cyoung1902@gmail.com",
+                        subject: "Integration Tests on Staging Status Email",
+                        body: "Integration tests on staging were successful",
+                        emailext attachLog}
                 }
             }
         }
