@@ -37,7 +37,7 @@ pipeline{
                    mail to: "cyoung1902@gmail.com",
                    subject: "Security Scan Status Email",
                    body: "Security scan was successful",
-                   emailext attachLog: true
+                   emailext attachLog
                 }
             }
         }
@@ -57,7 +57,7 @@ pipeline{
                    mail to: "cyoung1902@gmail.com",
                    subject: "Integration Tests on Staging Status Email",
                    body: "Integration tests on staging were successful",
-                   emailext attachLog: true
+                   emailext attachLog
                 }
             }
         }
