@@ -16,7 +16,8 @@ pipeline{
                 success{
                    mail to: "cyoung1902@gmail.com",
                    subject: "Tests Status Email",
-                   body: "Unit and Integration tests were successful" 
+                   body: "Unit and Integration tests were successful", 
+                   attachLog: true
                 }
             }
         }
@@ -35,7 +36,8 @@ pipeline{
                 success{
                    mail to: "cyoung1902@gmail.com",
                    subject: "Security Scan Status Email",
-                   body: "Security scan was successful" 
+                   body: "Security scan was successful",
+                   attachLog: true
                 }
             }
         }
@@ -54,7 +56,8 @@ pipeline{
                 success{
                    mail to: "cyoung1902@gmail.com",
                    subject: "Integration Tests on Staging Status Email",
-                   body: "Integration tests on staging were successful" 
+                   body: "Integration tests on staging were successful",
+                   attachLog: true
                 }
             }
         }
