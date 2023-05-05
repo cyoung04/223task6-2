@@ -14,10 +14,10 @@ pipeline{
             }
             post{
                 success{
-                   mail to: "cyoung1902@gmail.com",
-                   subject: "Tests Status Email",
-                   body: "Unit and Integration tests were successful",
-                   emailext attachLog
+                    mail to: "cyoung1902@gmail.com",
+                    subject: "Tests Status Email",
+                    body: "Unit and Integration tests were successful",
+                    emailext attachLog
                 }
             }
         }
@@ -34,10 +34,10 @@ pipeline{
             }
             post{
                 success{
-                   mail to: "cyoung1902@gmail.com",
-                   subject: "Security Scan Status Email",
-                   body: "Security scan was successful",
-                   emailext attachLog
+                    mail to: "cyoung1902@gmail.com",
+                    subject: "Security Scan Status Email",
+                    body: "Security scan was successful",
+                    emailext attachLog
                 }
             }
         }
@@ -54,10 +54,10 @@ pipeline{
             }
             post{
                 success{
-                   mail to: "cyoung1902@gmail.com",
-                   subject: "Integration Tests on Staging Status Email",
-                   body: "Integration tests on staging were successful",
-                   emailext attachLog
+                    mail to: "cyoung1902@gmail.com",
+                    subject: "Integration Tests on Staging Status Email",
+                    body: "Integration tests on staging were successful",
+                    emailext attachLog
                 }
             }
         }
