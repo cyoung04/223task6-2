@@ -15,9 +15,9 @@ pipeline{
             post{
                 success{
                    mail to: "cyoung1902@gmail.com",
-                   emailext attachmentsPattern: 'build.log',
                    subject: "Tests Status Email",
-                   body: "Unit and Integration tests were successful"
+                   body: "Unit and Integration tests were successful",
+                   emailext attachLog
                 }
             }
         }
