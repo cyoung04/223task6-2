@@ -35,6 +35,11 @@ pipeline{
                 }
             }
         }
+        stage("Deploy to Staging"){
+            steps{
+                echo "Deploy the application to a staging server..."
+            }
+        }
         stage("Integration Tests on Staging"){
             steps{
                 echo "Run integration tests on the staging environment to ensure the application functions as expected in a production-like environment..."
