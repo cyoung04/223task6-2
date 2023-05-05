@@ -51,13 +51,6 @@ pipeline{
             steps{
                 echo "Deploy the application to a production server..."
             }
-            post{
-                success{
-                   mail to: "cyoung1902@gmail.com",
-                   subject: "Build Status Email",
-                   body: "Build was successful!" 
-                }
-            }
         }
     }
 }
