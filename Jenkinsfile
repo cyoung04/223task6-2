@@ -21,7 +21,6 @@ pipeline{
                         
                         emailext attachLog: true,
                         compressLog: true
-                        }
                     }
                 }
             }
