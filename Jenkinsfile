@@ -11,6 +11,7 @@ pipeline{
             steps{
                 echo "Run unit tests to ensure the code functions as expected and run integration tests to ensure the different components of the application work together as expected..."
                 echo "Test automation tool: Selenium"
+                emailext attachLog: true, body: 'Unit and Integration tests were successful', subject: 'Tests Status Email', to: 'cyoung1902@gmail.com'
             }
             post{
                 success{
