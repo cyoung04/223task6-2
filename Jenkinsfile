@@ -15,12 +15,13 @@ pipeline{
             post{
                 success{
                     script{
-                        mail to: "cyoung1902@gmail.com",
-                        subject: "Tests Status Email",
-                        body: "Unit and Integration tests were successful"
+                        emailext attachlog: true, compressLog: true, body: "Unit and Integration tests were successful", subject: "Tests Status Email", to: "cyoung1902@gmail.com"
+                        //to: "cyoung1902@gmail.com",
+                        //subject: "Tests Status Email",
+                       //body: "Unit and Integration tests were successful"
                         
-                        emailext attachLog: true,
-                        compressLog: true
+                        //emailext attachLog: true,
+                        //compressLog: true
                     }
                 }
             }
