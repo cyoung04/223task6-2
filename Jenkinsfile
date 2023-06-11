@@ -11,7 +11,6 @@ pipeline{
             steps{
                 echo "Run unit tests to ensure the code functions as expected and run integration tests to ensure the different components of the application work together as expected..."
                 echo "Test automation tool: Selenium"
-                emailext(attachLog: true, to: "cyoung1902@gmail.com", subject: "Tests Status Email", body: "Unit and Integration tests were successful")
             }
             post{
                 success{
@@ -35,10 +34,7 @@ pipeline{
             post{
                 success{
                     script{
-                        mail to: "cyoung1902@gmail.com",
-                        subject: "Security Scan Status Email",
-                        body: "Security scan was successful"
-                        //emailext attachLog
+                        emailext(attachLog: true, to: "cyoung1902@gmail.com", subject: "Security Scan Status Email", body: "Security scan was successful")
                     }
                 }
             }
@@ -57,10 +53,7 @@ pipeline{
             post{
                 success{
                     script{
-                        mail to: "cyoung1902@gmail.com",
-                        subject: "Integration Tests on Staging Status Email",
-                        body: "Integration tests on staging were successful"
-                        //emailext attachLog
+                        emailext(attachLog: true, to: "cyoung1902@gmail.com", subject: "Integration Tests on Staging Status Email", body: "Integration tests on staging were successful")
                     }
                 }
             }
